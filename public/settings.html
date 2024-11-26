@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web DOS Games</title>
+
+  <!-- Bootstrap -->
+  <link href="/css/css3.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/docs.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="/css/selectize.bootstrap5.css" rel="stylesheet" />
+
+  <link href="/css/settings.css" rel="stylesheet">
+  <link href="/img/favicon.png" rel="icon" type="image/png">
+</head>
+<body>
+  <!-- HEADER -->
+  <div w3-include-html="/header.html"></div>
+
+<!-- MAIN -->
+<main>
+
+  <div class="container px-4 py-4">
+    <div id="alertPlaceholder"></div>
+
+    <div class="row row-cols-2 align-items-md-center g-5 mb-2 border-bottom">
+      <div class="col">
+          <h2 class="pb-2">Settings</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 p-3 text-bg">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <a class="bi-card-list nav-link primary" aria-current="page" id="gamesListLink" style="cursor: pointer;">
+                <svg class="bi pe-none" width="16" height="16"></svg>
+                Games list
+              </a>
+            </div>
+          </div>
+          <div class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <a class="bi-cloud-plus nav-link primary" aria-current="page" onclick="openCreateModal()" style="cursor: pointer;">
+                  <svg class="bi pe-none" width="16" height="16"></svg>
+                  Upload new
+                </a>
+              </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-9" id="content_div">
+
+      </div>
+    </div>
+  </div>
+</main>
+<!-- MAIN -->
+
+<div w3-include-html="/settings/create.html"></div>
+<div w3-include-html="/settings/create-manually.html"></div>
+<div w3-include-html="/settings/edit.html"></div>
+<div w3-include-html="/settings/confirm-remove.html"></div>
+
+<!--  Scripts-->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/selectize.min.js"></script>
+<script src="/js/w3.js"></script>
+<script>
+  w3.includeHTML(async function() {
+    initializeColorMode();
+    afterLoadingPage();
+  });
+</script>
+<script src="/js/color-modes.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/settings.js"></script>
+<script src="/js/settings/create.js"></script>
+<script src="/js/settings/create-manually.js"></script>
+<script src="/js/settings/edit.js"></script>
+<script src="/js/settings/confirm-remove.js"></script>
+</body>
+</html>

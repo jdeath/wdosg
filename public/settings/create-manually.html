@@ -1,0 +1,63 @@
+<div class="modal fade" id="createManuallyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Upload new game</h5>
+      </div>
+      <form action="/api/create" id="createManuallyForm" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="createManuallyFile" class="form-label">Game bundle</label>
+            <input class="form-control" type="file" id="createManuallyFile" name="file" accept=".jsdos" required>
+            <div class="invalid-feedback">
+              Please add a game bundle file.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="createManuallyName" name="name" required>
+            <div class="invalid-feedback">
+              Please add a game name.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyImageUrl" class="form-label">Cover URL</label>
+            <input type="text" class="form-control" id="createManuallyImageUrl" name="img">
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="createManuallyDescription" rows="3" name="description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyDevelopers" class="form-label">Developers</label>
+            <select class="form-control" id="createManuallyDevelopers" name="developers" multiple></select>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyPublishers" class="form-label">Publishers</label>
+            <select class="form-control" id="createManuallyPublishers" name="publishers" multiple></select>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyGenres" class="form-label">Genres</label>
+            <select class="form-control" id="createManuallyGenres" name="genres" multiple></select>
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyYear" class="form-label">Release</label>
+            <input type="text" class="form-control" id="createManuallyYear" name="year">
+          </div>
+          <div class="mb-3">
+            <label for="createManuallyTrailerUrl" class="form-label">Trailer URL</label>
+            <input type="text" class="form-control" id="createManuallyTrailerUrl" name="trailer">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="createManuallyModalClose">Close</button>
+          <button type="submit" class="btn btn-secondary" id="createManuallyModalSave" disabled>Save changes</button>
+          <button class="btn btn-secondary d-none" type="button" id="createManuallyModalSpinner" disabled>
+              <span class="spinner-border spinner-border-sm"></span>
+              <span role="status">Saving...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

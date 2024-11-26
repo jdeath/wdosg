@@ -1,0 +1,45 @@
+.popover {
+    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+}
+
+.bootstrap-select.form-control {
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+}
+
+.highlight {
+    padding: 0rem !important;
+}
+
+.selectize-input {
+    background-color: var(--bs-body-bg) !important;
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+}
+
+.selectize-dropdown, .selectize-dropdown.form-control {
+    background-color: var(--bs-body-bg) !important;
+}
+
+.selectize-dropdown, .selectize-input, .selectize-input input {
+    color: var(--bs-body-color) !important;
+}
+
+.selectize-dropdown .create {
+    color: var(--bs-body-color) !important;
+}
+
+.selectize-dropdown, .selectize-dropdown.form-control {
+    background-color: var(--bs-body-bg) !important;
+}
+
+.selectize-dropdown .active:not(.selected) {
+    background: var(--bs-secondary-color) !important;
+    color: var(--bs-body-bg) !important;
+}
+
+.selectize-dropdown .active.create {
+    color: var(--bs-purple) !important;
+}
+
+.selectize-dropdown .active.create.selected {
+    color: var(--bs-purple) !important;
+}
