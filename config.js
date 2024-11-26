@@ -12,7 +12,7 @@ export function getBundleTemplatePath() {
 }
 
 export function getDbPath() {
-    return './database';
+    return path.join(process.env.GAMES_DATABASE || (__dirname, '/app/database'));
 }
 
 export function getGamesLibraryLocation() {
